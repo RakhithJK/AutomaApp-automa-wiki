@@ -1,6 +1,6 @@
 ## Reference data
 
-You can use this feature if you want to add dynamic data to the block. To get started, you can write `{{ keyword@path }}` in the input of a block. In `keyword` write the source of the data, there are three sources where you can get the data from:
+You can use this feature if you want to add dynamic data like in the selector or the form value input of a block. To get started, you can write `{{ keyword@path }}` in the input of a block. In `keyword` write the source of the data, there are three sources where you can get the data from:
 
 1. `dataColumns`: get data from the data columns.
 2. `prevBlockData`: get data from the previous block.
