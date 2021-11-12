@@ -3,10 +3,10 @@
 Use this block to loop through data from data columns or use your custom data from a JSON or CSV file. After you input the data, the current iteration data will be available in the next block, and to access it write `{{ loopData@loopID.path }}` in an input.
 
 Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block. For example, if the data that you input is an array of objects like this
-```js
+```json
 [
-  { name: 'foo bar', age: 20 },
-  { name: 'bar foo', age: 21 },
+  { "name": "foo bar", "age": 20 },
+  { "name": "bar foo", "age": 21 }
 ]
 ```
 to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. You can set how much data that the block should loop at the max data input.
