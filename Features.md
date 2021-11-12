@@ -5,10 +5,14 @@
 You can use this feature if you want to add dynamic data in the input of a block like in the selector or the form value. To get started, you can write `{{ keyword@path }}` in the input of a block. In `keyword` write the source of the data, there are three sources where you can get the data from:
 
 1. `dataColumns`: get data from the data columns.
-2. `prevBlockData`: get data from the previous block.
-3. `loopData`: get data from the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data) block.
+2. `loopData`: get the iteration data from the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data).
+3. `prevBlockData`: get data from the previous block.
 
-And `path` is where you write the key of the data and it's optional. It depends on the structure of the data if the data is an array of objects like the data columns for example that looks like this
+
+And `path` is where you write the key of the data and nested key also supported. The syntax is could be different on each of the sources of the data
+
+### Data columns
+The data of data columns is an array of objects that looks like this
 ```js
 [
   { city: 'london', country: 'england' },
@@ -16,18 +20,10 @@ And `path` is where you write the key of the data and it's optional. It depends 
   { city: 'jakarta', country: 'Indonesia' },
 ]
 ```
-To get the first data, you can write `{{ dataColumns@0.city }}` and the output would be `London`. To get the second data write `{{ dataColumns@1.city }}` and so on. If the data is nested like this
-```js
-[
-  {
-    key: {
-      deepKey: {
-        deeperKey: 'deeper key value',
-      },
-      first: 'foo',
-      last: 'bar',
-    },
-  }
-]
-```
-to get the value of `deeperKey` you can write `{{ dataColumns@0.key.deepKey.deeperKey }}`.
+To get the first data, you can write `{{ dataColumns@0.city }}` and the output would be `London`. To get the second data write `{{ dataColumns@1.city }}` and so on.
+
+### Loop data
+To get the iteration data of the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data), you must write the loop ID first before the `path` for example `{{ loopData@loopID.path }}`.
+
+### Previous block data
+Get data from the previous block. Because all blocks are returning data, like a get text block that returns the text that it got from the element. To get the data, write `{{ prevBlockData }}`.
