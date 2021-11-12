@@ -2,20 +2,22 @@
 
 Use this block to loop through data from data columns or use your custom data from a JSON or CSV file. After you input the data, the current iteration data will be available in the next block, and to access it write `{{ loopData@loopID.path }}` in an input.
 
-Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block For example if the data that you input is an array of objects like this
+Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block. For example, if the data that you input is an array of objects like this
 ```js
 [
   { name: 'foo bar', age: 20 },
   { name: 'bar foo', age: 21 },
 ]
 ```
-to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the iteration, the output would be `bar foo` and so on until the last entry. You can set how much data that the block should loop at the max data input.
+to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. You can set how much data that the block should loop at the max data input.
 
 You can learn more on [Reference Data](https://github.com/Kholid060/automa/wiki/Features#reference-data);
 
 ## Loop breakpoint
 
-After you're using the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data), use this block to tell where the loop data block must stop. You must fill the loop ID at the provided input, so it knows which loop data blocks it must stop. Like when you have a workflow like this
+After you're using the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data), use this block to tell where the loop data block must stop. You must fill the loop ID at the provided input, so can it know which Loop data blocks it must stop. 
+
+Like when you have a workflow like this
 
 <img src="https://i.ibb.co/xjdpvnZ/image.png" align="center" style="width: 100%" />
 
