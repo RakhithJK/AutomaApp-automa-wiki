@@ -2,7 +2,7 @@
 
 Use this block to loop through data from data columns or use your custom data from a JSON or CSV file. After you input the data, the current iteration data will be available in the next block, and to access it write `{{ loopData@loopID.path }}` in an input.
 
-Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block. For example, if the data that you input is an array of objects like this
+Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block. Make sure when you input the data it's [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) syntax, for example, if the data that you input is an array of objects like this
 ```json
 [
   { "name": "foo bar", "age": 20 },
