@@ -1,5 +1,7 @@
 ## Javascript code
-When automa doesn't have a block to handle a certain situation in the web page, like comparing two values of DOM for instance. You can insert your javascript code logic with this block, and here is the example of code when you want to compare two values of DOM
+When automa doesn't have a block to handle a certain situation in the web page, like comparing two values of DOM for instance. You can insert your javascript code logic with this block, the code will execute on the web page when it is fully loaded.
+
+Here is the example of code when you want to compare two values of DOM
 ```js
 const input1 = document.querySelector('.first-input')
 const input2 = document.querySelector('.second-input')
