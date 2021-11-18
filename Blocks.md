@@ -41,7 +41,7 @@ Replace the `loopID` with the ID of the loop, you can find it on the left side w
   { "name": "bar foo", "age": 21 }
 ]
 ```
-to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. You can set how much data that the block should loop at the max data input.
+to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. If you want to access the full object you can write `{{loopData@loopID}}` and the output would be `{ "name": "foo bar", "age": 20 }`. And You can set how much data that the block should loop at the max data input.
 
 You can learn more on [Reference Data](https://github.com/Kholid060/automa/wiki/Features#reference-data);
 
