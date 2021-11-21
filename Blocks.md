@@ -1,3 +1,23 @@
+## Trigger
+This is block is the starting point where the workflow will start executing, you can configure how the workflow should be triggered using this block.
+### Manually
+Manually trigger the workflow by clicking the play (▶️) button.
+### Interval
+Execute the workflow in intervals, you can define the interval and the delay before executing the workflow in provided input.
+### On a specific date
+Execute the workflow on a specific date and time.
+### On a specific day
+Execute the workflow on a specific day and time, like ff you want to execute a workflow every day or every Sunday and Tuesday at 9 AM, you can use this option.
+### When visiting a website
+The workflow will automatically be executed when you're visiting a website that matches the URL or the [ReGex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that you inputted. And when you check the `Use regex` checkbox, the value you inputted will be treated as a [ReGex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+
+You can directly connect the trigger block with the block in the web interaction category when you use this option and the workflow will be executed on the website that you're in.
+
+### Keyboard shortcut
+Execute the workflow using a keyboard shortcut. You can specify the keyboard shortcut by clicking the record (⏺️) button and pressing the key that you want to use.
+
+The keyboard shortcut only works when you're on a website. And by default, the shortcut doesn't work when the cursor is on an input element, so to prevent this behavior click the "Active while in input" checkbox.
+
 ## Javascript code
 When automa doesn't have a block to handle a certain situation in the web page, like comparing two values of DOM for instance. You can insert your javascript code logic with this block, the code will execute on the web page when it is fully loaded.
 
@@ -41,7 +61,7 @@ Replace the `loopID` with the ID of the loop, you can find it on the left side w
   { "name": "bar foo", "age": 21 }
 ]
 ```
-to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. If you want to access the full object you can write `{{loopData@loopID}}` and the output would be `{ "name": "foo bar", "age": 20 }`. And You can set how much data that the block should loop at the max data input.
+to access the data of the iteration write `{{ loopData@loopID.name }}` and the output would be `foo bar` and in the next iteration, the output would be `bar foo` and so on until the last entry. If you want to access the full object you can write `{{loopData@loopID}}` and the output would be `{ "name": "foobar", "age": 20 }`. And You can set how much data that the block should loop at the max data input.
 
 You can learn more on [Reference Data](https://github.com/Kholid060/automa/wiki/Features#reference-data);
 
