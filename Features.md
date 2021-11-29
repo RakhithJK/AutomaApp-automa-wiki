@@ -7,7 +7,8 @@ You can use this feature if you want to add dynamic data in the input of a block
 1. `dataColumns`: get data from the data columns.
 2. `loopData`: get the iteration data from the [loop data block](https://github.com/Kholid060/automa/wiki/Blocks/_edit#loop-data).
 3. `prevBlockData`: get data from the previous block.
-4. `globalData`: get global data that you have defined
+4. `globalData`: get the global data that you have defined.
+5. `activeTabUrl`: get the currently active tab url.
 
 
 And `path` is where you write the key of the data and nested key also supported. The syntax is could be different on each of the sources of the data
