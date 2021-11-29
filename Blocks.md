@@ -38,7 +38,7 @@ At the end of the code, you see `automaNextBlock`. This function is for telling 
 
 There are two functions you can execute inside the javascript code.
 
-### `automaNextBlock`
+### `automaNextBlock(data)`
 To tell the workflow to execute the next block. This function accepts one parameter which you can use to save data into the workflow data columns, the parameter must be an `object` or an `array of objects`. You must use the column that you added as a key for the object, for example when you have added the `text` column the code should look like.
 ```js
 // object
@@ -47,8 +47,11 @@ automaNextBlock({ text: 'lorem ipsum' })
 // array of objects
 automaNextBlock([{ text: 'lorem ipsum' }, { text: 'lorem ipsum 2' }])
 ```
-### `automaResetTimeout`
+### `automaResetTimeout()`
 Because this block has an execution timeout, it will automatically execute the next block when the timer expires. So to reset this timer, you can call this function.
+
+### `automaRefData(keyword, path)`
+Use this function to [reference data](https://github.com/Kholid060/automa/wiki/Features#reference-data).
 
 ## Loop data
 
