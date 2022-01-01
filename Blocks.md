@@ -53,9 +53,27 @@ Because this block has an execution timeout, it will automatically execute the n
 ### `automaRefData(keyword, path)`
 Use this function to [reference data](https://github.com/Kholid060/automa/wiki/Features#reference-data).
 
+## Google sheets
+Get data from [Google Sheets](https://www.google.com/sheets/about/). And make sure you share the spreadsheet that you want to use as a public, to do that you can click the Share button and copy the link like the image below
+
+![Google sheets URL](https://res.cloudinary.com/chat-story/image/upload/v1641014063/automa/Screenshot_2022-01-01_131346_ityxor.png)
+
+### Spreadsheet Id
+The Spreadsheet Id contains letters, numbers, hyphens, or underscores. And you can find it in the Google Sheets URL
+`
+https://docs.google.com/spreadsheets/d/SpreadsheetID/edit?usp=sharing
+`
+
+### Range
+You can define the range of the cells that you want to get from the spreadsheet, you can write [A1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-1) syntax like `Sheet1!A1:B2` or [R1C1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-2) syntax like `Sheet1!R1C1:R2C2` in here.
+
+### Reference key
+Use the key that you write here whenever you want to [reference data](https://github.com/Kholid060/automa/wiki/Features#reference-data) of the google sheets. For example, if you input `list` as the key and you want to use them as the value at the **Forms** block, you can input `{{ googleSheets@list.path }}`.
+
+
 ## Loop data
 
-Use this block to loop through data from data columns or use your custom data from a JSON or CSV file. After you input the data, the current iteration data will be available in the next block, and to access it write `{{ loopData@loopID.path }}` in an input.
+Use this block to loop through data from data columns, numbers, google sheets, or use your custom data from a JSON or CSV file. After you input the data, the current iteration data will be available in the next block, and to access it write `{{ loopData@loopID.path }}` in an input.
 
 Replace the `loopID` with the ID of the loop, you can find it on the left side when clicking the edit button of the loop data block. Make sure when you input the data it's [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) syntax, for example, if the data that you input is an array of objects like this
 ```JSON
