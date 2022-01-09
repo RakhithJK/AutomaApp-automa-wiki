@@ -64,6 +64,8 @@ The Spreadsheet Id contains letters, numbers, hyphens, or underscores. And you c
 https://docs.google.com/spreadsheets/d/SpreadsheetID/edit?usp=sharing
 `
 
+![image](https://res.cloudinary.com/chat-story/image/upload/v1641768594/automa/chrome_OuX2wQzOe4_lyd8tv.png)
+
 ### Range
 You can define the range of the cells that you want to get from the spreadsheet, you can write [A1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-1) syntax like `Sheet1!A1:B2` or [R1C1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-2) syntax like `Sheet1!R1C1:R2C2` in here.
 
