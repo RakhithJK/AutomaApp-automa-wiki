@@ -67,11 +67,15 @@ https://docs.google.com/spreadsheets/d/SpreadsheetID/edit?usp=sharing
 ![image](https://res.cloudinary.com/chat-story/image/upload/v1641768594/automa/chrome_OuX2wQzOe4_lyd8tv.png)
 
 ### Range
-You can define the range of the cells that you want to get from the spreadsheet, you can write [A1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-1) syntax like `Sheet1!A1:B2` or [R1C1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-2) syntax like `Sheet1!R1C1:R2C2` in here.
+You can define the range of the cells that you want to get or update from the spreadsheet, you can input [A1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-1) syntax like `Sheet1!A1:B2` or [R1C1 Notation](https://developers.google.com/sheets/api/guides/concepts#expandable-2) syntax like `Sheet1!R1C1:R2C2` in here.
 
 ### Reference key
 Use the key that you write here whenever you want to [reference data](https://github.com/Kholid060/automa/wiki/Features#reference-data) of the google sheets. For example, if you input `list` as the key and you want to use them as the value at the **Forms** block, you can input `{{ googleSheets@list.path }}`.
 
+### Update spreadsheet cells
+To be able to update the cells of the spreadsheet, Automa needs to have access to the spreadsheet first. To give access, you can click the share button at the top right and then at the "Add people" form input `service@automa2.iam.gserviceaccount.com`
+
+![Share](https://res.cloudinary.com/chat-story/image/upload/v1642067522/automa/chrome_9iHTFjxWEn_lzavjy.png)
 
 ## Loop data
 
